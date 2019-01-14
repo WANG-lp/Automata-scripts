@@ -12,7 +12,7 @@ tar xzf ${TMP}/tmux.tar.gz -C ${TMP}
 cd ${TMP}/tmux-${VERSION}
 
 echo "compile"
-./configure --prefix=${PREFIX} CFLAGS="-I${PREFIX}/include" LDFLAGS="-L${PREFIX}/lib"
+CFLAGS='-I/home/lwangay/root/include' LDFLAGS='-L/home/lwangay/root/lib' ./configure --prefix=${PREFIX} CFLAGS="-I${PREFIX}/include" LDFLAGS="-L${PREFIX}/lib"
 make -j4
 make install
 

@@ -12,7 +12,7 @@ tar xzf ${TMP}/htop.tar.gz -C ${TMP}
 
 echo "compile"
 cd ${TMP}/htop-${VERSION}
-./configure --prefix=${PREFIX}
+CPPFLAGS='-I/home/lwangay/root/include' LDFLAGS='-L/home/lwangay/root/lib' ./configure --prefix=${PREFIX}
 make -j4
 make install
 
